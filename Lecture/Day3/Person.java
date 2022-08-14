@@ -12,6 +12,17 @@ public class Person {
 
 		System.out.println(school);
 		System.out.println("This is my school: " + school); 
+		
 
+		postIncrement();
 	}
+
+	public static void postIncrement() {
+
+		int l = 10;
+
+		System.out.println(l++);
+	}
+
+
 }
