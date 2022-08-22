@@ -34,9 +34,16 @@ public class MyShop {
 		} while(buyAgain == 1);
 		
 				
-		System.out.println(volcher);
+		System.out.println("Total price: " + volcher);
 		
 	}
+	
+/*	public static boolean payment() {
+		
+		
+	} */
+	
+	
 	
 	public static void showInfo() {
 			
@@ -68,6 +75,8 @@ public class MyShop {
 		
 		return price;
 	}
+	
+	
 
 }
 
