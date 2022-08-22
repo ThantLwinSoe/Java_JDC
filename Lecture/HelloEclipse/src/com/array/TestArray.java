@@ -41,16 +41,11 @@ public class TestArray {
 		String [][] name = new String[3][2];
 			
 		for (int i =0 ; i < name.length ; i ++) {
-			
-//			System.out.println("This is row " + name.length);
-			
+					
 				for (int j = 0; j < name[i].length ; j ++) {
 				
-					
-//					System.out.println("This is coloum " + name[i].length);
-					System.out.println(i + " " + j);
-					
-					
+// check the Logic					
+//					System.out.println(i + " " + j);						
 					
 					if(j == 0 ) {
 						
@@ -62,7 +57,6 @@ public class TestArray {
 						
 						System.out.println("Enter the Last Name: ");
 						String personName = sc.nextLine();
-					//	String personName = "Kyaw";
 						name[i][j] = personName;
 					}   
 					
