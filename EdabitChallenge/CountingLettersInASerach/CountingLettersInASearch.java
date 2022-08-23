@@ -29,8 +29,8 @@ public class CountingLettersInASearch {
 	private String[][] setLetter() {
 
 		String [][] nameArray = new String [][] {
-			{"Thant", "Lwin", "Soe"},
-			{"Khine", "Lai", "Mon"},
+			{"Ka", "Baw", "Soe"},
+			{"Rose", "Lai", "Mon"},
 			{"Soe","Mon"},
 			{"Soe Mon"}
 		};
