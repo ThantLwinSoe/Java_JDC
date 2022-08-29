@@ -26,11 +26,14 @@ public class AscendingSortingArray {
 		int temp;
 		int sensor = 0;
 
-		for(int i = 0 ; i < array.length ; i ++ ) {
+		for(int i = 0 ; i < array.length ; i++ ) {
 
 			if(i == array.length-1) {
 
 				i = -1 ;
+
+		//		i =0;
+
 		// Cannot i = 0; assign	
 		
 				sensor ++;
