@@ -20,6 +20,7 @@ public class LargestGapInArray {
 		int result = 0;
 		int [] sensorArray ={};
 
+		// sorting array from lower level to higher 
 		int [] array = sortingArray(arrayRandom);
 
 		// input gap-number between Numbers of sensorArray to check the biggest number
@@ -29,13 +30,14 @@ public class LargestGapInArray {
 
 				result = array[j] - array[i];
 				sensorArray = Arrays.copyOf(sensorArray, sensorArray.length + 1);
-
+				// input the gap numbers
 				sensorArray[sensorArray.length - 1] = result;
 			}
 		}
 
+		// Sorting again random gap numbers Ascending 
 		int [] showTime = sortingArray(sensorArray);
-
+		// show biggest number of Gap
 		return showTime[showTime.length -1];
 	}
 
