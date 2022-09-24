@@ -26,6 +26,7 @@ public class TryWithResource {
 			e.printStackTrace();
 
 		}
+//		System.out.printf();
 	}
 }
 // class which extends or implements AutoCloseable need to close the end process 
