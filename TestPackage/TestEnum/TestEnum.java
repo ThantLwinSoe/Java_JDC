@@ -10,7 +10,7 @@ public class EnumMain {
 
 	public static void main(String [] args){
 		Day d = Day.MON;
-		System.out.println(d);
+	//	System.out.println(d);
 
 		System.out.println(d.toString());	
 	}
