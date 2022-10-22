@@ -7,3 +7,4 @@ public class Main {
 		inf.getInterface(new Person(), "Thant" ,20);
 	}
 }
+
