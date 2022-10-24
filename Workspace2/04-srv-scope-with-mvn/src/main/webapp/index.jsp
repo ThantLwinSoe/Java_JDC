@@ -4,35 +4,41 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Scope Demo</title>
+<title>Insert title here</title>
 </head>
-<body>
-	<h1>JSP</h1>
-	<table>
-		<tr>
-			<td>Scriptlet</td>
-			<td>
-				<% 
-				name = "Hello JSP";
-				%>
-			</td>
-			
-		</tr>
-		<tr>
-			<td>Declaration :</td>
-			<td>
-				<%! String name;  %>
-			</td>
-			
-		</tr>
-		<tr>
-			<td>Expression :</td>
-			<td>
-				<%= name %>
-			</td>
-			
-		</tr>
-	</table>
+<style>
+	.card {
+		display: flex;
+		width: 300px;
+		padding: 1.5rem; 
+		background-color: black;
+//		border-color: white;
+		border-radius: 20px;
+		
+		margin-top: 10 px;
+		color: white;
+	}
+	
+	body{
+		padding: 2em;
+	}
 
+</style>
+<body>
+	<h1>Hello JSP</h1>
+	<%! String name; %>
+/*	<% 
+		name = "Hello Servlet";
+	%>
+	<%		for (int i=0; i<5 ; i++){	%>
+*/	
+	<div class="card">
+	<a href="hello?name=<%= name %>">Cookie Test</a>
+	
+	</div>
+	
+	
+//	<% }%>
+	
 </body>
 </html>
