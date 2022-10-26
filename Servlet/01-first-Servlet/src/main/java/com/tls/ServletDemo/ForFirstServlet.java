@@ -19,6 +19,8 @@ public class ForFirstServlet extends HttpServlet{
 		//System.out.println("Result is :" + k);
 		
 		res.getWriter().println("Result is :" + k);
+		
+		//res.getWriter().println("O");
 	}
 	
 	
