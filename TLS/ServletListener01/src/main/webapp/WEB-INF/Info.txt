@@ -1,0 +1,5 @@
+Apple Cake	Food	1000
+Green Tea	Drink	4000
+Chocolate Cake	Food	3000
+Mango Juice	Drink	1500
+Buger	Food	2500
