@@ -18,12 +18,13 @@
 	
 	<h1>Product List</h1>
 	
-	<table>
-		<tr>
+	<table width="50%">
+		<tr style="text-align: left">
 			<th>ID</th>
 			<th>Category</th>
 			<th>Name</th>
 			<th>Price</th>
+			<th>Add</th>
 		</tr>
 		<%
 			for(int i = 0; i < model.getList().size(); i ++){
@@ -34,6 +35,7 @@
 			<td><%= p.getName() %></td>
 			<td><%= p.getCategory() %></td>
 			<td><%= p.getPrice() %></td>
+			<td><a href="cart-add?product=<%=p.getId() %>">Add to Cart</a></td>
 		</tr>
 		<%		
 			}
