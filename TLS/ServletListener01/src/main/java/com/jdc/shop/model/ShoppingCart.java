@@ -2,6 +2,8 @@ package com.jdc.shop.model;
 
 import java.io.Serializable;
 
+import com.jdc.shop.model.entity.Product;
+
 public interface ShoppingCart extends Serializable {
 	
 	void add(Product p);

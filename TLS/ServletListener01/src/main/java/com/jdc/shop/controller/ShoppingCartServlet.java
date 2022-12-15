@@ -2,9 +2,9 @@ package com.jdc.shop.controller;
 
 import java.io.IOException;
 
-import com.jdc.shop.model.Product;
 import com.jdc.shop.model.ProductModel;
 import com.jdc.shop.model.ShoppingCart;
+import com.jdc.shop.model.entity.Product;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
