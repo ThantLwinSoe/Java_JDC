@@ -1,4 +1,5 @@
 <%@ page import="com.jdc.shop.model.*" %>
+<%@ page import="com.jdc.shop.model.entity.*" %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -17,6 +18,14 @@
 	<h2>This is ServletContextListener</h2>
 	
 	<h1>Product List</h1>
+	
+	<p>
+		Shopping Cart : 
+		<a href="cart-show">
+			<% ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");%> 
+			<%=(null == cart ? "0" : cart.itemCount()) %>
+		</a>
+	</p>
 	
 	<table width="50%">
 		<tr style="text-align: left">

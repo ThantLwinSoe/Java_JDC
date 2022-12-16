@@ -33,8 +33,7 @@ public class SaleItem implements Serializable {
 		this.count = count;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public void addOne() {
+		count ++;
 	}
-
 }

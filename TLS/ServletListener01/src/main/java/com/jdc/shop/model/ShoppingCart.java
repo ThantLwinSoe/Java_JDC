@@ -16,7 +16,7 @@ public interface ShoppingCart extends Serializable {
 	
 	public static ShoppingCart generate() {
 		
-		return null;
+		return new ShoppingCartImpl();
 	}
 
 }
