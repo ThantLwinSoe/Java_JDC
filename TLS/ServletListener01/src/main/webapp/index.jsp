@@ -1,8 +1,9 @@
-<%@ page import="com.jdc.shop.model.*" %>
-<%@ page import="com.jdc.shop.model.entity.*" %>
+
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.jdc.shop.model.*" %>
+<%@ page import="com.jdc.shop.model.entity.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,6 +26,16 @@
 			<% ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");%> 
 			<%=(null == cart ? "0" : cart.itemCount()) %>
 		</a>
+	</p>
+	
+	<p>
+		<% 	
+			if(cart !=null && cart.itemCount() > 0){
+		%>
+			<a href="cart-clear">Cart Clear</a>
+		<%		
+			}	
+		%>
 	</p>
 	
 	<table width="50%">

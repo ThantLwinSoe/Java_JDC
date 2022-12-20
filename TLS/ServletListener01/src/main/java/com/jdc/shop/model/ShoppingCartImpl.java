@@ -47,7 +47,7 @@ class ShoppingCartImpl implements ShoppingCart{
 	public int itemCount() {
 		int count = 0;
 		for(SaleItem saleItem : list) {
-			count = saleItem.getCount();
+			count += saleItem.getCount();
 		}
 		return count;
 	}
@@ -65,6 +65,12 @@ class ShoppingCartImpl implements ShoppingCart{
 			total += item.getTotal();
 		}
 		return total;
+	}
+
+	@Override
+	public List<SaleItem> items() {
+		
+		return new ArrayList<>(list);
 	}
 	
 	
