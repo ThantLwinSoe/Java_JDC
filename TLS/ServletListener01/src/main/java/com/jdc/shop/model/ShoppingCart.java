@@ -18,6 +18,8 @@ public interface ShoppingCart extends Serializable {
 	
 	List<SaleItem> items();
 	
+	void operation(boolean plus,int productId);
+	
 	public static ShoppingCart generate() {
 		
 		return new ShoppingCartImpl();

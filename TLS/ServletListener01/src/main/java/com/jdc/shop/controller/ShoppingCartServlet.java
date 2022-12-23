@@ -16,7 +16,9 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet({
 	"/cart-add", 
 	"/cart-show",
-	"/cart-clear"
+	"/cart-clear",
+	"/cart-plus",
+	"/cart-minus"
 })
 public class ShoppingCartServlet extends HttpServlet{
 
@@ -35,11 +37,33 @@ public class ShoppingCartServlet extends HttpServlet{
 		case "/cart-clear":
 			clearToCart(req,resp);
 			break;
+		case "/cart-plus":
+		case "/cart-minus":
+			getCountOperation(req,resp);
+			break;
 		
 		}	
 		
 	}
 	
+	private void getCountOperation(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		
+		// Shopping Cart from Session Scope
+		var cart = (ShoppingCart)req.getSession().getAttribute("cart");
+		
+		// plus or minus
+		var plus = req.getServletPath().equals("/cart-plus");
+		
+		// get productID from parameter 
+		var product = req.getParameter("product");
+		
+		// operation plus or minus
+		cart.operation(plus, Integer.parseInt(product));
+		// Redirect
+		var path = req.getContextPath().concat("/ShowCart.jsp");
+		resp.sendRedirect(path);
+	}
+
 	public void clearToCart(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {
 		
 		// get session

@@ -27,9 +27,7 @@
 			<td>Product Name</td>
 			<td>Category</td>
 			<td>Unit Price</td>
-			<td></td>
 			<td>Count</td>
-			<td></td>
 			<td>Unit Total</td>
 		</tr>
 
@@ -41,9 +39,13 @@
 			<td><%=item.getProduct().getName()%></td>
 			<td><%=item.getProduct().getCategory()%></td>
 			<td><%=formatting(item.getProduct().getPrice())%></td>
-			<td></td>
-			<td><%=formatting(item.getCount())%></td>
-			<td></td>
+			<td>
+			<!--  Minus -->
+				<a href="cart-minus?product=<%=item.getProduct().getId()%>">-</a>
+				<%=formatting(item.getCount())%>
+			<!-- Plus -->
+				<a href="cart-plus?product=<%=item.getProduct().getId()%>">+</a>
+			</td>
 			<td><%=formatting(item.getTotal())%></td>
 		</tr>
 
@@ -53,7 +55,7 @@
 		%>
 
 		<tr>
-			<td colspan="6">Total</td>
+			<td colspan="4">Total</td>
 			<td><%=formatting(sc.total())%></td>
 		</tr>
 

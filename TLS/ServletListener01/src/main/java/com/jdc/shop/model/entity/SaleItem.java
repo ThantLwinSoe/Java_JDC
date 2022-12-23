@@ -36,4 +36,12 @@ public class SaleItem implements Serializable {
 	public void addOne() {
 		count ++;
 	}
+	
+	public void countUp(boolean plus) {
+		if(plus) {
+			count ++;
+		}else {
+			count --;
+		}
+	}
 }
