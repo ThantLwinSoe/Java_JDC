@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Dyademo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>HelloServlet</display-name>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>com.jdc.tls.HelloServlet</servlet-class>
+   	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello-Servlet</url-pattern>
+    <url-pattern>/countUP</url-pattern>
+    <url-pattern>/filter</url-pattern>
+    <url-pattern>/servlet-listener</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>HelloFilter</filter-name>
+  	<filter-class>com.jdc.tls.ServletFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>HelloFilter</filter-name>
+  	<url-pattern>/filter</url-pattern>
+  </filter-mapping>
+  
+  
+  
+</web-app>
