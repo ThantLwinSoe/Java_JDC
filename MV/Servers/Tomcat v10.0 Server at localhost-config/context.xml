@@ -26,4 +26,13 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
+    
+    <Resource name="jdbc/test" type="javax.sql.DataSource"
+    driverClassName="com.mysql.cj.jdbc.Driver" 
+    url="jdbc:mysql://localhost:3306/test"
+    auth="Container"
+    username="root"
+    password="root"></Resource>
+    
+    
 </Context>
