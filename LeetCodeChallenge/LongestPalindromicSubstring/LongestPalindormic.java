@@ -1,59 +1,32 @@
 class LongestPalindormic {
 
-	public static String getLongestPalindrome(String str) throws IndexOutOfBoundsException{
+	public static String getLongestPalindrome(String str) {
 
 		// str = bbb ===> length 3
 		var list = new ArrayList<>(List.of(str.split("")));
 		var builder = new StringBuilder();
 
-		int remainder = str.length() % 2 ;
-		int mid = str.length() / 2 ;
-		int mid_right = 0;
-		int mid_left = 0;
+		// for two pointers
+		int right = list.size() / 2 ;
+		int left = right - 1 ;
 		int sensor = 0;
-		if(mid == 0) {
+
+		// only one word
+		if(right == 0) {
 			return str;
 		}
 
-		if( remainder != 0 ) {
-			mid_right = ( str.length() / 2 ) + 1;// 2
-			mid_left = ( str.length() /2 ) - 1; // 0
-		} else {
-			mid_right = mid; //1
-			mid_left = mid - 1; //0					
-		}
-
+		// index pointers should have two left right 
 
 		do {	
-
-			if( remainder != 0 ) {
-
-				sensor ++; // 1
-				if( list.get(mid).equals( list.get(mid_right)) ){
-
-					builder.append(list.get(mid));
-					builder.append(list.get(mid_right)); // bb
-					if(mid_right < list.size() -1 ) {
-						mid_right ++ ;
-					}
-					
-				} else if( list.get(mid).equals( list.get(mid_left)) ) { // mid == mid_left ?
-					builder.append(list.get(mid));
-					builder.append(list.get(mid_left));
-					if (mid_left > 0) {
-						mid_left -- ;
-					}
-						
-				} else if( list.get(mid_left).equals(list.get(mid_right)) ) { // mid_left == mid_right ?
-					builder.append(list.get(mid));
-					builder.append(list.get(mid_left));
-					builder.append(list.get(mid_right));
-//					mid_right ++ ;
-//					mid_left -- ;
-				} 			
+			// left == right ?
+			if( list.get(left).equals(list.get(right)) ) {
+				
 			}
 
-		}while( sensor < list.size() );
+			sensor ++;
+
+		}while( sensor < list.size() -1 );
 
 
 

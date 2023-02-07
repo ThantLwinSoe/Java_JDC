@@ -16,7 +16,7 @@ class TestWhileLoop {
 
 		var count = lenghtOfInt(num);
 		int sensor = 1;
-		int div = 1;
+		int div = 1;  
 
 		while(count > sensor) {
 			div *= 10;
